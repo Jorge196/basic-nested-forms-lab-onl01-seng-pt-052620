@@ -11,6 +11,7 @@ describe "the recipe form", :type => :feature do
 
   it "adds ingredients" do
     visit '/recipes/new'
+    fill_in :recipe_title, with: 'Chocolate Cake'
     fill_in :recipe_ingredients_attributes_0_name, with: 'sugar'
     fill_in :recipe_ingredients_attributes_0_quantity, with: '1 cup'
     fill_in :recipe_ingredients_attributes_1_name, with: 'vanilla'
